@@ -1,0 +1,34 @@
+[2025-11-19T09:29:53.317Z] Watching local folder: C:\\Users\\Lawrenze\\Desktop\\DESKTOP\\BO FOR DEPLOYMENT\\SRSBO_SERVER_ATTACHMENT\\public\\images
+[2025-11-19T09:29:53.317Z] Syncing to network folder: C:\\Users\Lawrenze\\Desktop\\DESKTOP\\BO FOR DEPLOYMENT\\SRS_BO_REPORTS\\SRS_RS_BO_REPORTS_SERVER\\public\\images\\srsn
+[2025-11-19T09:29:53.611Z] SYNCED: SyncToy_6023c9e4-d2ca-4fa3-ab69-c1b79a15f6a7.dat
+[2025-11-19T09:29:53.620Z] SYNCED: SyncToy_dd176785-83c9-428f-a761-7d51b5db0dd4.dat
+[2025-11-19T09:29:53.642Z] SYNCED: Thumbs.db
+[2025-11-19T09:29:53.644Z] Initial full sync completed.
+[2025-11-19T09:29:53.649Z] Real-time watching started (safe deletion enabled)...
+[2025-11-19T09:30:40.108Z] REMOVED: SyncToy_6023c9e4-d2ca-4fa3-ab69-c1b79a15f6a7.dat
+[2025-11-19T09:30:40.108Z] REMOVED: SyncToy_dd176785-83c9-428f-a761-7d51b5db0dd4.dat
+[2025-11-19T09:33:50.439Z] Syncing to network folder: C:\\Users\Lawrenze\\Desktop\\DESKTOP\\BO FOR DEPLOYMENT\\SRS_BO_REPORTS\\SRS_RS_BO_REPORTS_SERVER\\public\\images\\srsn
+[2025-11-19T09:33:50.438Z] Watching local folder: C:\\Users\\Lawrenze\\Desktop\\DESKTOP\\BO FOR DEPLOYMENT\\SRSBO_SERVER_ATTACHMENT\\public\\images
+[2025-11-19T09:33:50.618Z] SYNCED: Thumbs.db
+[2025-11-19T09:33:50.619Z] Initial full sync completed.
+[2025-11-19T09:33:50.622Z] Real-time watching started (safe deletion enabled)...
+[2025-11-19T09:34:30.882Z] REMOVED: 9990194288
+[2025-11-19T09:34:30.907Z] REMOVED: 9990194289
+[2025-11-19T09:34:30.935Z] REMOVED: 9990199520
+[2025-11-19T09:34:30.952Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990194288\2019~pictureActualRS.jpg
+[2025-11-19T09:34:30.953Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990194288\2019~pictureDriversID.jpg
+[2025-11-19T09:34:30.953Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990194288\2019~pictureInvoice.jpg
+[2025-11-19T09:34:30.954Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990194288\2019~pictureRSSlip.jpg
+[2025-11-19T09:34:30.954Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990194289\2019~pictureActualRS.jpg
+[2025-11-19T09:34:30.954Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990194289\2019~pictureDriversID.jpg
+[2025-11-19T09:34:30.954Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990194289\2019~pictureInvoice.jpg
+[2025-11-19T09:34:30.955Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990194289\2019~pictureRSSlip.jpg
+[2025-11-19T09:34:30.955Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990199520\2019~pictureActualRS.jpg
+[2025-11-19T09:34:30.955Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990199520\2019~pictureDriversID.jpg
+[2025-11-19T09:34:30.956Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990199520\2019~pictureInvoice.jpg
+[2025-11-19T09:34:30.956Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990199520\2019~pictureRSSlip.jpg
+[2025-11-19T09:35:15.680Z] REMOVED: 9990194238
+[2025-11-19T09:35:15.736Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990194238\2019~pictureActualRS.jpg
+[2025-11-19T09:35:15.737Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990194238\2019~pictureDriversID.jpg
+[2025-11-19T09:35:15.740Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990194238\2019~pictureInvoice.jpg
+[2025-11-19T09:35:15.740Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990194238\2019~pictureRSSlip.jpg
