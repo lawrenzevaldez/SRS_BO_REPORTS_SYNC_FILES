@@ -32,3 +32,26 @@
 [2025-11-19T09:35:15.737Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990194238\2019~pictureDriversID.jpg
 [2025-11-19T09:35:15.740Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990194238\2019~pictureInvoice.jpg
 [2025-11-19T09:35:15.740Z] SKIPPED deletion (parent folder missing locally): C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9990194238\2019~pictureRSSlip.jpg
+[2025-11-20T05:01:53.436Z] Syncing to network folder: C:\\Users\Lawrenze\\Desktop\\DESKTOP\\BO FOR DEPLOYMENT\\SRS_BO_REPORTS\\SRS_RS_BO_REPORTS_SERVER\\public\\attachments\\novaliches
+[2025-11-20T05:01:53.436Z] Watching local folder: C:\\Users\\Lawrenze\\Desktop\\DESKTOP\\BO FOR DEPLOYMENT\\SRSBO_SERVER_ATTACHMENT\\public\\images
+[2025-11-20T05:01:53.689Z] SYNCED: Thumbs.db
+[2025-11-20T05:01:53.691Z] Initial full sync completed.
+[2025-11-20T05:01:53.697Z] Real-time watching started (safe deletion enabled)...
+[2025-11-21T06:22:07.450Z] Syncing to network folder: C:\\Users\Lawrenze\\Desktop\\DESKTOP\\BO FOR DEPLOYMENT\\SRS_BO_REPORTS\\SRS_RS_BO_REPORTS_SERVER\\public\\attachments\\novaliches
+[2025-11-21T06:22:07.449Z] Watching local folder: C:\\Users\\Lawrenze\\Desktop\\DESKTOP\\BO FOR DEPLOYMENT\\SRSBO_SERVER_ATTACHMENT\\public\\images
+[2025-11-21T06:22:07.668Z] SYNCED: Thumbs.db
+[2025-11-21T06:22:07.669Z] Initial full sync completed.
+[2025-11-21T06:22:07.677Z] Real-time watching started (safe deletion enabled)...
+[2025-11-21T06:31:32.682Z] ERROR syncing C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRSBO_SERVER_ATTACHMENT\public\images\9008: EEXIST: file already exists, mkdir 'C:\Users\Lawrenze\Desktop\DESKTOP\BO FOR DEPLOYMENT\SRS_BO_REPORTS\SRS_RS_BO_REPORTS_SERVER\public\attachments\novaliches\9008'
+[2025-11-21T06:31:32.693Z] SYNCED: 9008\2019~pictureInvoice.png
+[2025-11-21T06:31:32.699Z] SYNCED: 9008\2019~pictureActualRS.png
+[2025-11-21T06:31:32.699Z] SYNCED: 9008\2019~pictureDriversID.png
+[2025-11-21T06:31:32.700Z] SYNCED: 9008\2019~pictureRSSlip.png
+[2025-11-21T06:46:00.356Z] SYNCED: 9009
+[2025-11-21T06:46:00.366Z] SYNCED: 9009\2019~pictureInvoice.png
+[2025-11-21T06:46:00.366Z] SYNCED: 9010
+[2025-11-21T06:46:03.134Z] SYNCED: 9009\2019~pictureDriversID.png
+[2025-11-21T06:46:06.188Z] SYNCED: 9009\2019~pictureActualRS.png
+[2025-11-21T06:46:08.660Z] SYNCED: 9009\2019~pictureRSSlip.png
+[2025-11-21T06:46:11.324Z] SYNCED: 9010\2019~pictureActualRS.png
+[2025-11-21T06:46:16.079Z] SYNCED: 9010\2019~pictureRSSlip.png
