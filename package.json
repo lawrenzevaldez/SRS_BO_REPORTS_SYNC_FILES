@@ -5,7 +5,7 @@
   "description": "Adonisjs boilerplate for API server with pre-configured JWT",
   "main": "index.js",
   "scripts": {
-    "production": "pm2 start ace --name srs-bo-sync-files -- watch:syncfull",
+    "production": "pm2 start ecosystem.config.js",
     "start": "node server.js",
     "test": "node ace test"
   },
