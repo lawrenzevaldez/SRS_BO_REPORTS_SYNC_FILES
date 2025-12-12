@@ -1,0 +1,6 @@
+1. Run CMD as Administrator.
+2. Type this command:
+
+net use Z: "\\192.168.0.204\Programs\SRS_RS_BO_REPORTS\SRS_RS_BO_REPORTS_SERVER\public\attachments\alaminos" /persistent:yes
+
+3. Change the "ALAMINOS" in the corresponding branch.
