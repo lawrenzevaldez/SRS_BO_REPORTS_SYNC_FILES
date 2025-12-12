@@ -17,10 +17,13 @@ class WatchSyncFull extends Command {
 
   async handle() {
     // ===== CONFIG =====
-    const localFolders = (Env.get("LOCAL_FOLDER") || "")
+    const rawFolders = Env.get("LOCAL_FOLDERS") || "";
+
+    // Split safely, remove empty & normalize paths
+    const localFolders = rawFolders
       .split(";")
-      .map((f) => f.trim())
-      .filter((f) => f.length > 0); // remove empty entries
+      .map((f) => f.trim().replace(/\/+$/g, "")) // remove trailing slash
+      .filter((f) => f.length > 0);
 
     const networkFolder = Env.get("NETWORK_FOLDER");
     const logFile = Env.get("SYNC_LOG");
@@ -34,46 +37,47 @@ class WatchSyncFull extends Command {
       this.info(message);
     };
 
-    await log(`Watching local folders: ${localFolders.join(", ")}`);
-    await log(`Syncing to network folder: ${networkFolder}`);
+    await log(`Loaded local folders: ${JSON.stringify(localFolders)}`);
+    await log(`Network folder: ${networkFolder}`);
 
-    // ===== GET NETWORK DESTINATION PATH =====
+    // ===== VALIDATE EACH FOLDER =====
+    for (const f of localFolders) {
+      if (!fs.existsSync(f)) {
+        await log(`❌ ERROR: Local folder does NOT exist → ${f}`);
+      } else {
+        await log(`✔ Local folder OK → ${f}`);
+      }
+    }
+
+    // ===== MAKE PATH FOR NETWORK COPY =====
     const getNetworkPath = (rootFolder, filePath) => {
       const relative = path.relative(rootFolder, filePath);
       return path.join(networkFolder, relative);
     };
 
-    // ===== SYNC FILE FUNCTION =====
+    // ===== SYNC FILE =====
     const syncFile = (rootFolder) => async (filePath) => {
       try {
         const destPath = getNetworkPath(rootFolder, filePath);
         await fs.ensureDir(path.dirname(destPath));
         await fs.copy(filePath, destPath);
         await log(
-          `SYNCED: (${rootFolder}) ${path.relative(rootFolder, filePath)}`
+          `SYNCED (${rootFolder}): ${path.relative(rootFolder, filePath)}`
         );
       } catch (err) {
         await log(`ERROR syncing ${filePath}: ${err.message}`);
       }
     };
 
-    // ===== SAFE DELETE FUNCTION =====
+    // ===== DELETE FILE =====
     const removeFileOrDir = (rootFolder) => async (filePath) => {
       try {
         const destPath = getNetworkPath(rootFolder, filePath);
-        const parentLocal = path.dirname(filePath);
-
-        if (!fs.existsSync(parentLocal)) {
-          await log(
-            `SKIPPED deletion (parent folder missing locally): ${filePath}`
-          );
-          return;
-        }
 
         if (await fs.pathExists(destPath)) {
           await fs.remove(destPath);
           await log(
-            `REMOVED: (${rootFolder}) ${path.relative(rootFolder, filePath)}`
+            `REMOVED (${rootFolder}): ${path.relative(rootFolder, filePath)}`
           );
         }
       } catch (err) {
@@ -81,48 +85,59 @@ class WatchSyncFull extends Command {
       }
     };
 
-    // ===== INITIAL FULL SYNC FOR ALL FOLDERS =====
+    // ===== FULL SYNC =====
     const fullSync = async () => {
       for (const rootFolder of localFolders) {
-        const entries = await fs.readdir(rootFolder);
+        try {
+          await log(`🔁 FULL SYNC START: ${rootFolder}`);
 
-        for (const e of entries) {
-          const fullPath = path.join(rootFolder, e);
-          const stats = await fs.stat(fullPath);
-          const destPath = getNetworkPath(rootFolder, fullPath);
+          const entries = await fs.readdir(rootFolder);
 
-          if (stats.isDirectory()) {
-            await fs.copy(fullPath, destPath);
-          } else {
-            await syncFile(rootFolder)(fullPath);
+          for (const e of entries) {
+            const fullPath = path.join(rootFolder, e);
+            const stats = await fs.stat(fullPath);
+
+            if (stats.isDirectory()) {
+              await fs.copy(fullPath, getNetworkPath(rootFolder, fullPath));
+            } else {
+              await syncFile(rootFolder)(fullPath);
+            }
           }
+
+          await log(`✔ FULL SYNC DONE: ${rootFolder}`);
+        } catch (err) {
+          await log(
+            `❌ ERROR during full sync of ${rootFolder}: ${err.message}`
+          );
         }
       }
-
-      await log("Initial full sync completed for all folders.");
     };
 
     await fullSync();
 
-    // ===== SETUP WATCHERS PER FOLDER =====
+    // ===== WATCHERS =====
     for (const rootFolder of localFolders) {
-      const watcher = chokidar.watch(rootFolder, {
-        persistent: true,
-        ignoreInitial: true,
-        depth: 20,
-      });
+      try {
+        const watcher = chokidar.watch(rootFolder, {
+          persistent: true,
+          ignoreInitial: true,
+          depth: 30,
+        });
 
-      watcher
-        .on("add", syncFile(rootFolder))
-        .on("change", syncFile(rootFolder))
-        .on("unlink", removeFileOrDir(rootFolder))
-        .on("addDir", syncFile(rootFolder))
-        .on("unlinkDir", removeFileOrDir(rootFolder));
+        watcher
+          .on("add", syncFile(rootFolder))
+          .on("change", syncFile(rootFolder))
+          .on("unlink", removeFileOrDir(rootFolder))
+          .on("addDir", syncFile(rootFolder))
+          .on("unlinkDir", removeFileOrDir(rootFolder));
 
-      await log(`Real-time watching started for: ${rootFolder}`);
+        await log(`👀 Watching: ${rootFolder}`);
+      } catch (err) {
+        await log(`❌ Failed to watch ${rootFolder}: ${err.message}`);
+      }
     }
 
-    await log("Watching all folders (safe deletion enabled)...");
+    await log("All watchers started successfully.");
     process.stdin.resume();
   }
 
